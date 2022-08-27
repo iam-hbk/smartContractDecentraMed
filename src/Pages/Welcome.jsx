@@ -37,8 +37,8 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  //   align-items: center;
-  border: 1px solid green;
+  align-items: center;
+  // border: 1px solid green;
   width: 100%;
   height: 90%;
   margin: 10px;
@@ -50,7 +50,7 @@ const Box = styled.div`
   justify-content: space-center;
   align-items: center;
   width: 100%;
-  border: 1px solid green;
+  // border: 1px solid green;
 `;
 const Title = styled.h1`
   font-family: "Urbanist";
@@ -59,7 +59,7 @@ const Title = styled.h1`
   font-size: 40px;
   text-align: center;
   color: #012a32;
-  border: 1px solid red;
+  // border: 1px solid red;
   margin: 5px 0;
 `;
 const Text = styled.span`
@@ -68,7 +68,7 @@ const Text = styled.span`
   font-weight: normal;
   font-size: 14px;
   color: #012a32;
-  border: 1px solid purple;
+  // border: 1px solid purple;
 `;
 const Button = styled.button`
   display: inline-block;
@@ -78,16 +78,22 @@ const Button = styled.button`
   height: 45px;
   width: 100%;
   padding: 0.25em 1em;
-  border: 1.5px solid #012a32;
+  // border: 1.5px solid #012a32;
   border-radius: 5px;
   display: block;
   background-color: #e6f3f6;
   cursor: pointer;
+  transition : 0.5s;
+  &:hover {
+    background : #048ba8;
+    color : white;
+  }
+ 
 `;
 const ActionButton = styled(Button)`
-  background-color: #048BA8;
+  background-color: #048ba8;
   color: #e6f3f6;
-  border: 1px solid #e6f3f6;
+  // border: 1px solid #e6f3f6;
 `;
 function Welcome() {
   let users = ["Doctor", "Health Care Staff", "Certificate Validator"];
@@ -114,7 +120,7 @@ function Welcome() {
             {users.map((user) => (
               <Button key={user}>{user}</Button>
             ))}
-            <ActionButton>Next</ActionButton>
+            {/* <ActionButton>Next</ActionButton> */}
           </Box>
         </Form>
       </Section>
