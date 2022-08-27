@@ -5,6 +5,7 @@
     width: 22%;
     background-color: #048BA8;
     align-items: flex-start;
+    flex-direction: column;
 }
 .sidebar img{
     margin: 15px;
