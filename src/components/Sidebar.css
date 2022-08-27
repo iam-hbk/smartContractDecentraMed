@@ -11,6 +11,7 @@
   border: 1px solid #e6f3f6;
   box-sizing: border-box;
   border-top: none;
+    flex-direction: column;
 }
 .sidebar img {
   margin: 15px;
