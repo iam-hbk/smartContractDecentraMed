@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import WebFont from "webfontloader";
 import welcome from "../Assets/Images/Welcome.png";
+import { Link } from "react-router-dom";
 
 const WelcomeContainer = styled.div`
   display: flex;
@@ -36,7 +37,7 @@ const Image = styled.img`
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   // border: 1px solid green;
   width: 100%;
@@ -49,6 +50,7 @@ const Box = styled.div`
   flex-direction: column;
   justify-content: space-center;
   align-items: center;
+  margin: 25px 0;
   width: 100%;
   // border: 1px solid green;
 `;
@@ -83,12 +85,13 @@ const Button = styled.button`
   display: block;
   background-color: #e6f3f6;
   cursor: pointer;
-  transition : 0.5s;
+  transition: 0.5s;
   &:hover {
-    background : #048ba8;
-    color : white;
+    background: #048ba8;
+    color: white;
+    border: white;
+    font-weight: bold;
   }
- 
 `;
 const ActionButton = styled(Button)`
   background-color: #048ba8;
@@ -113,12 +116,18 @@ function Welcome() {
         <Form>
           <Box>
             <Title fontFamily="Urban">Welcome Back</Title>
-            <Text>Let’s get stated, It will take a few minutes...</Text>
+            <Text>Let’s get started, It will take a few minutes...</Text>
           </Box>
           <Box style={{ alignItems: "flex-start" }}>
             <Text>Choose an option:</Text>
             {users.map((user) => (
-              <Button key={user}>{user}</Button>
+              <Link
+                style={{ width: "100%", textDecoration: "none" }}
+                key={user}
+                to="signIn"
+              >
+                <Button>{user}</Button>
+              </Link>
             ))}
             {/* <ActionButton>Next</ActionButton> */}
           </Box>
