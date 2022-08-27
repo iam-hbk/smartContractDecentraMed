@@ -115,7 +115,7 @@ function SignUp() {
             <label>Password</label>
             <input placeholder="******" type="password" />
           </div>
-          <Link style={{ textDecoration: "none" }} to="/Dashboard">
+          <Link style={{ textDecoration: "none" }} to="/dashboard/home">
             <ActionButton>Sign In</ActionButton>
           </Link>
         </Form>
