@@ -272,7 +272,10 @@ function HomeBody() {
                     style={{ margin: "7px" }}
                     label="Event Details"
                   />
-                  <Button style={{ margin: "7px" }} label="Join Event" />
+                  <Button
+                    style={{ margin: "7px", backgroundColor: "#048ba8" }}
+                    label="Join Event"
+                  />
                 </div>
               </div>
               <div className="row">
@@ -292,11 +295,14 @@ function HomeBody() {
                 </div>
                 <div style={{ display: "flex", justifyContent: "center" }}>
                   <Button
-                  className="p-button-outlined"
+                    className="p-button-outlined"
                     style={{ margin: "7px" }}
                     label="Event Details"
                   />
-                  <Button style={{ margin: "7px" }} label="Join Event" />
+                  <Button
+                    style={{ margin: "7px", backgroundColor: "#048ba8" }}
+                    label="Join Event"
+                  />
                 </div>
               </div>
             </div>
