@@ -7,12 +7,14 @@ import Appointment from "../Pages/Main/Appointment";
 import Devices from "../Pages/Main/Devices";
 import MedicalReport from "../Pages/Main/MedicalReport";
 import Messages from "../Pages/Main/Messages";
+import AboutUser from "../components/AboutUser";
 
 function Main() {
   return (
     <Routes>
       <Route path="/dashboard/home" element={<Home />} />
       <Route path="/dashboard/patients" element={<AllPatients />} />
+      <Route path="/dashboard/patient-details" element={<AboutUser />} />
       <Route path="/dashboard/analysis" element={<Analysis />} />
       <Route path="/dashboard/medicalReports" element={<MedicalReport />} />
       <Route path="/dashboard/messages" element={<Messages />} />
