@@ -280,6 +280,7 @@ const ChartComponent = () => {
       radius: [20, 20, 0, 0],
       
     },
+    
   };
 
   return (
