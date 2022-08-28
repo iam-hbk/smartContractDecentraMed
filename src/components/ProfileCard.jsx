@@ -34,7 +34,7 @@ const ProfileCard = (props) => {
         <Avatar src={UserInfo.avatar} />
         <br />
         <DarkText>Name Surname</DarkText>
-        <br />S<BlueText>Last Visti: {UserInfo.lastVisit}</BlueText>
+        <BlueText>Last Visti: {UserInfo.lastVisit}</BlueText>
         <InlineInfo>
           <DarkText>Sex</DarkText>
           <BlueText>{UserInfo.sex}</BlueText>

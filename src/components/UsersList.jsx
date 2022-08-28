@@ -4,11 +4,13 @@ import "primeicons/primeicons.css"; //icons
 import {
   Avatar,
   DarkText,
+  ListText,
   PageContainer,
   TitlesContainer,
   TitleText,
   UserListContainer,
 } from "./CustomComponets";
+import { Link } from "react-router-dom";
 
 const { useEffect, useState } = require("react");
 
@@ -56,13 +58,21 @@ const UsersList = () => {
       </TitlesContainer>
 
       {users.map((user) => (
-        <UserListContainer>
-          <Avatar src={user.avatar} />
-          <DarkText>{user.name}</DarkText>
-          <DarkText>{user.desease}</DarkText>
-          <DarkText>{user.date}</DarkText>
-          <DarkText>{user.time}</DarkText>
-        </UserListContainer>
+        <Link
+          to={{
+            pathname: `/dashboard/patient-details/?user=user213`,
+            query: { id: "user123" },
+          }}
+          style={{ textDecoration: "none" }}
+        >
+          <UserListContainer>
+            <Avatar src={user.avatar} />
+            <ListText style={{ marginRight: "10px" }}>{user.name}</ListText>
+            <ListText>{user.desease}</ListText>
+            <ListText>{user.date}</ListText>
+            <ListText style={{ paddingLeft: "6%" }}>{user.time}</ListText>
+          </UserListContainer>
+        </Link>
       ))}
     </PageContainer>
   );

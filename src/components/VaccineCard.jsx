@@ -25,16 +25,24 @@ const VaccineCard = (props) => {
   return (
     <VaccineCardContainer>
       <InlineInfo>
-        <div>
-          <DarkTitle>Vaccinanation Certificate</DarkTitle>
+        <div style={{ display: "flex" }}>
+          <h4>Vaccinanation Certificate</h4>
           <Notification>2</Notification>
         </div>
         <AiOutlineMore />
       </InlineInfo>
       <DownloadCard>
-        <div>
+        <div
+          style={{
+            color: "#048ba8",
+            width: "100%",
+            display: "flex",
+          }}
+        >
           <AiOutlineFilePdf size={20} />
-          <BlueText>Covid-19 Vaccination</BlueText>
+          <b style={{ color: "#048ba8", width: "100%" }}>
+            Covid-19 Vaccination
+          </b>
         </div>
         <IconButton
           onClick={() =>
@@ -45,9 +53,15 @@ const VaccineCard = (props) => {
         </IconButton>
       </DownloadCard>
       <DownloadCard>
-        <div>
-          <AiOutlineFilePdf />
-          <BlueText>Child immunasation</BlueText>
+        <div
+          style={{
+            color: "#048ba8",
+            width: "100%",
+            display: "flex",
+          }}
+        >
+          <AiOutlineFilePdf size={20} />
+          <b style={{ color: "#048ba8", width: "100%" }}>Child immunasation</b>
         </div>
         <IconButton
           onClick={() =>

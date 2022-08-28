@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const PageContainer = styled.div`
   background-color: #048ba8;
   padding: 10px;
+  width: 100%;
 `;
 
 export const TitlesContainer = styled.div`
@@ -45,12 +46,21 @@ export const Avatar = styled.img`
   width: 50px;
   height: 50px;
   border: 2px solid #048ba8;
-  margin-right: 10%;
+  margin-right: 20%;
   margin: auto;
 `;
 
 export const DarkText = styled.span`
   color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+`;
+
+export const ListText = styled(DarkText)`
+  width: 18%;
 `;
 
 // ----------- End of UserList.jsx -----------
@@ -70,8 +80,9 @@ export const ProfileCardContainer = styled.div`
   align-items: center;
   align-content: center;
   text-align: center;
-  padding: 10px;
-  width: 30%;
+  padding: 20px;
+  width: 4%;
+  margin: 10px;
   background-color: white;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -100,13 +111,16 @@ export const BlueText = styled(DarkText)`
 export const InlineInfo = styled.div`
   display: flex;
   flex-direction: row;
+  width: 100%;
   justify-content: space-between;
 `;
 
 // ----------- End of ProfileCard.jsx -----------
 
 // ----------- Start of VaccineCard.jsx -----------
-export const VaccineCardContainer = styled(ProfileCardContainer)``;
+export const VaccineCardContainer = styled(ProfileCardContainer)`
+  width: 9.2%;
+`;
 
 export const Notification = styled.span`
   background: rgba(1, 42, 50, 0.5);
@@ -121,13 +135,16 @@ export const DownloadCard = styled(InlineInfo)`
   padding: 10px;
   border-radius: 5px;
   margin-top: 10px;
+  padding-top: 5%;
 `;
 
 // ----------- End of VaccineCard.jsx -----------
 
 // ----------- Start of BMICard.jsx -----------
 
-export const BMICardContainer = styled(ProfileCardContainer)``;
+export const BMICardContainer = styled(ProfileCardContainer)`
+  width: 9.2%;
+`;
 
 export const NumberSliderContainer = styled.div`
   border: 1px solid rgba(1, 42, 50, 0.5);
@@ -176,7 +193,9 @@ export const Center = styled.div`
 // ----------- End of BMICard.jsx -----------
 
 // ----------- Start of UnderlayingCondiitions.jsx -----------
-export const ConditionsContainer = styled(ProfileCardContainer)``;
+export const ConditionsContainer = styled(ProfileCardContainer)`
+  width: 4.6%;
+`;
 
 export const ConditionsItem = styled.div`
   padding: 10px;
@@ -204,7 +223,8 @@ export const CompositionInfo = styled.div`
 `;
 export const CompositionImageContainer = styled.div``;
 export const CompositionImage = styled.img`
-  width: 100%;
+  width: 110%;
+  height: 120%;
 `;
 const c = "#36A2EB";
 export const ColorSpan = styled.div`
@@ -223,4 +243,51 @@ export const Diaglabel = styled(LightText)`
 
 export const CompositionItem = styled.div`
   margin: 10px;
+`;
+
+// ----------- End of BodyComposition.jsx -----------
+
+// ----------- Start of AllPatients.jsx -----------
+export const PageFraggment = styled.div``;
+export const Body = styled.div`
+  position: absolute;
+  right: 20%;
+  top: 80px;
+  padding: 10px;
+  border-left: 1px solid #e6f3f6;
+  border-top: none;
+  width: 58%;
+  height: auto;
+`;
+export const BodyContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  overflow-x: hidden;
+  font: 14px "Urbanist", sans-serif;
+`;
+
+export const Side = styled.div`
+  position: fixed;
+  right: 0;
+  top: 82px;
+  border-top: none;
+  width: 20%;
+  height: 550px;
+  padding: 8px;
+`;
+
+export const SideContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #e6f3f6;
+  border-radius: 5px;
+  height: 100%;
+  padding: 10px;
 `;

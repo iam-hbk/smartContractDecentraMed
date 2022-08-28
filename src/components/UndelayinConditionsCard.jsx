@@ -20,9 +20,13 @@ const Conditions = () => {
       </InlineInfo>
       {[1, 2, 3, 4].map((condition) => (
         <ConditionsItem>
-          <BlueText>Dental Health</BlueText>
+          <BlueText>
+            <b>Dental Health</b>
+          </BlueText>
           <br />
-          <LightText>08 December 2021</LightText>
+          <LightText>
+            <b>08 December 2021</b>
+          </LightText>
         </ConditionsItem>
       ))}
     </ConditionsContainer>
