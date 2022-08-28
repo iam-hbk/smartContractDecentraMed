@@ -1,6 +1,6 @@
 import React from "react";
-import Sidebar from "../../Components/Sidebar";
-import ToolBar from "../../Components/ToolBar";
+import Sidebar from "../../components/Sidebar";
+import ToolBar from "../../components/ToolBar";
 import styled from "styled-components";
 import { AiOutlineArrowUp, AiOutlineArrowDown } from "react-icons/ai";
 
