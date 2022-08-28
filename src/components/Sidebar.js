@@ -70,7 +70,7 @@ function Sidebar() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "flex-start",
-                // margin: 0,
+                margin: 4,
               }}
             >
               <img style={{ margin: "10px" }} src={link.icon} alt={link.name} />
@@ -95,8 +95,6 @@ function Sidebar() {
               display: "flex",
               alignItems: "center",
               justifyContent: "flex-start",
-
-              // margin: 0,
             }}
           >
             <img style={{ margin: "10px" }} src={Logout} alt="Logout" />
@@ -104,46 +102,6 @@ function Sidebar() {
           </button>
         </NavLink>
       </div>
-      {/* <div>
-        <NavLink
-          to="/Dashboard"
-          className={({ isActive }) =>
-            isActive ? "linkContainerActive" : "linkContainer"
-          }
-        >
-          <button>Dashboard</button>
-        </NavLink>
-      </div>
-      <div>
-        <NavLink to="patients">
-          <button>All Patients</button>
-        </NavLink>
-      </div>
-      <div>
-        <NavLink to="appointments">
-          <button>Appointments</button>
-        </NavLink>
-      </div>
-      <div>
-        <NavLink to="medicalReports">
-          <button>Medical Reports</button>
-        </NavLink>
-      </div>
-      <div>
-        <NavLink to="messages">
-          <button>Messages</button>
-        </NavLink>
-      </div>
-      <div>
-        <NavLink to="devices">
-          <button>Devices</button>
-        </NavLink>
-      </div>
-      <div>
-        <NavLink to="analysis">
-          <button>Analysis</button>
-        </NavLink>
-      </div> */}
     </div>
   );
 }

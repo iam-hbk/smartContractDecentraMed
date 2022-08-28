@@ -10,6 +10,23 @@
   align-items: center;
   flex-direction: column;
   border-right: 1px solid #e6f3f6;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /* hide scrollbar */
+}
+.sidebar::-webkit-scrollbar {
+  width: 2px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background: #f2f2f2;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: #BC0909;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 .sidebar img.logo {
   margin: 15px;
