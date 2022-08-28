@@ -199,8 +199,28 @@ export const LightText = styled(DarkText)`
 // ----------- Start of BodyComposition.jsx -----------
 export const BodyCompositionContainer = styled(ProfileCardContainer)``;
 
-export const CompositionInfo = styled.div``;
+export const CompositionInfo = styled.div`
+  width: 50%;
+`;
 export const CompositionImageContainer = styled.div``;
 export const CompositionImage = styled.img`
   width: 100%;
+`;
+const c = "#36A2EB";
+export const ColorSpan = styled.div`
+  width: 30%;
+  height: 60%;
+  border-radius: 10px;
+  background-color: red;
+`;
+
+export const Diaglabel = styled(LightText)`
+  display: flex;
+  flex-direction: coloumn;
+  justify-content: flex-end;
+  height: 100%;
+`;
+
+export const CompositionItem = styled.div`
+  margin: 10px;
 `;
