@@ -1,16 +1,17 @@
 .sidebar {
   position: fixed;
   top: 0;
+  left: 0;
   display: flex;
-
   /* justify-content: center; */
   height: 100vh;
   width: 22%;
   background-color: #048ba8;
   align-items: center;
   flex-direction: column;
+  border-right: 1px solid #e6f3f6;
 }
-.sidebar img {
+.sidebar img.logo {
   margin: 15px;
   margin-bottom: 50px;
 }
