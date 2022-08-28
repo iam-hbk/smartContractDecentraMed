@@ -59,7 +59,7 @@ function Sidebar() {
           <NavLink
             to={link.path}
             className={({ isActive }) =>
-              isActive ? "linkContainerActive" : "linkContainer"
+              isActive ? "linkContainer active" : "linkContainer"
             }
             style={{
               textDecoration: "none",
@@ -83,7 +83,7 @@ function Sidebar() {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            isActive ? "linkContainerActive" : "linkContainer"
+            isActive ? "linkContainer active" : "linkContainer"
           }
           style={{
             textDecoration: "none",
