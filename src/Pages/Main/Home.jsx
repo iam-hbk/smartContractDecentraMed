@@ -1,9 +1,9 @@
 import React from "react";
-import Sidebar from "../../Components/Sidebar";
-import ToolBar from "../../Components/ToolBar";
+import Sidebar from "../../components/Sidebar";
+import ToolBar from "../../components/ToolBar";
 import styled from "styled-components";
 import "./Home.css";
-import HomeBody from "../../Components/HomeBody";
+import HomeBody from "../../components/HomeBody";
 const DashboardContainer = styled.div`
   position: relative;
   width: 100%;
