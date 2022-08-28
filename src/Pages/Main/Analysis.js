@@ -4,6 +4,7 @@ import ToolBar from "../../components/ToolBar";
 import styled from "styled-components";
 import { AiOutlineArrowUp, AiOutlineArrowDown } from "react-icons/ai";
 import { Column } from "@ant-design/plots";
+import { Chart } from "primereact/chart";
 
 let MedRecordsData = [
   {
@@ -45,7 +46,6 @@ const BodyContent = styled.div`
   align-items: flex-start;
   width: 100%;
   height: 100%;
-  border: 3px solid purple;
   padding: 10px;
   font: 14px "Urbanist", sans-serif;
 `;
@@ -122,7 +122,23 @@ function Analysis() {
         </BodyContent>
       </Body>
       <Side>
-        <SideContent>Calendar and Appointments</SideContent>
+        <SideContent>
+          <h3
+            style={{
+              font: "14px Urbanist, sans-serif",
+            }}
+          >
+            Rising Illnesses
+          </h3>
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+            }}
+          >
+            <PieChart />
+          </div>
+        </SideContent>
       </Side>
     </Container>
   );
@@ -227,7 +243,8 @@ const ChartComponent = () => {
       type: "Heart Disease",
       Month: "March",
       value: Math.floor(Math.random() * (14500 - 5000) + 5000),
-    },{
+    },
+    {
       city: "JHB",
       type: "Asthma",
       Month: "April",
@@ -261,6 +278,7 @@ const ChartComponent = () => {
     isGroup: true,
     columnStyle: {
       radius: [20, 20, 0, 0],
+      
     },
   };
 
@@ -275,5 +293,37 @@ const ChartComponent = () => {
     >
       <Column {...config} />
     </div>
+  );
+};
+
+const PieChart = () => {
+  const [chartData] = useState({
+    labels: ["Asthma", "Cancer", "Diabetes", "Heart Disease"],
+    datasets: [
+      {
+        data: [130, 50, 100, 150],
+        backgroundColor: ["#012A3230", "#BC0909", "#048BA8", "#FFD700"],
+        hoverBackgroundColor: ["#012A32", "#BC090970", "#048BA890", "#FFD70070"],
+      },
+    ],
+  });
+
+  const [lightOptions] = useState({
+    plugins: {
+      legend: {
+        labels: {
+          color: "#495057",
+        },
+      },
+    },
+  });
+
+  return (
+    <Chart
+      type="pie"
+      data={chartData}
+      options={lightOptions}
+      style={{ width: "100%", height: "100%" }}
+    />
   );
 };
