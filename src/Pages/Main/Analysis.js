@@ -1,13 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "../../Components/Sidebar";
 import ToolBar from "../../Components/ToolBar";
 import styled from "styled-components";
 import { AiOutlineArrowUp, AiOutlineArrowDown } from "react-icons/ai";
-
-// // Map chart
-// import 'rsuite/dist/rsuite.min.css';
-// import { MapChart } from '@rsuite/charts';
-// import 'echarts/map/js/china';
+import { Column } from "@ant-design/plots";
 
 let MedRecordsData = [
   {
@@ -27,7 +23,6 @@ let MedRecordsData = [
     value: "123 298",
   },
 ];
-
 
 const Container = styled.div`
   position: relative;
@@ -123,6 +118,7 @@ function Analysis() {
             })}
           </div>
           <h1>MapCharts And Stuff</h1>
+          <ChartComponent />
         </BodyContent>
       </Body>
       <Side>
@@ -155,5 +151,129 @@ const Estimate = ({ data }) => {
     </div>
   ) : (
     <div style={{ color: "red" }}>{difference.toFixed(2)}%</div>
+  );
+};
+
+const ChartComponent = () => {
+  const [data] = useState([
+    {
+      city: "JHB",
+      type: "Asthma",
+      Month: "January",
+      value: 14500,
+    },
+    {
+      city: "JHB",
+      type: "Cancer",
+      Month: "January",
+      value: Math.floor(Math.random() * (14500 - 5000) + 5000),
+    },
+    {
+      city: "Soweto",
+      type: "Diabetes",
+      Month: "January",
+      value: Math.floor(Math.random() * (14500 - 5000) + 5000),
+    },
+    {
+      city: "Cape Town",
+      type: "Heart Disease",
+      Month: "January",
+      value: Math.floor(Math.random() * (14500 - 5000) + 5000),
+    },
+    {
+      city: "JHB",
+      type: "Asthma",
+      Month: "February",
+      value: 1500,
+    },
+    {
+      city: "JHB",
+      type: "Cancer",
+      Month: "February",
+      value: Math.floor(Math.random() * (14500 - 5000) + 5000),
+    },
+    {
+      city: "Soweto",
+      type: "Diabetes",
+      Month: "February",
+      value: Math.floor(Math.random() * (14500 - 5000) + 5000),
+    },
+    {
+      city: "Cape Town",
+      type: "Heart Disease",
+      Month: "February",
+      value: Math.floor(Math.random() * (14500 - 5000) + 5000),
+    },
+    {
+      city: "JHB",
+      type: "Asthma",
+      Month: "March",
+      value: 11500,
+    },
+    {
+      city: "JHB",
+      type: "Cancer",
+      Month: "March",
+      value: Math.floor(Math.random() * (14500 - 5000) + 5000),
+    },
+    {
+      city: "Soweto",
+      type: "Diabetes",
+      Month: "March",
+      value: Math.floor(Math.random() * (14500 - 5000) + 5000),
+    },
+    {
+      city: "Cape Town",
+      type: "Heart Disease",
+      Month: "March",
+      value: Math.floor(Math.random() * (14500 - 5000) + 5000),
+    },{
+      city: "JHB",
+      type: "Asthma",
+      Month: "April",
+      value: 14500,
+    },
+    {
+      city: "JHB",
+      type: "Cancer",
+      Month: "April",
+      value: Math.floor(Math.random() * (14500 - 5000) + 5000),
+    },
+    {
+      city: "Soweto",
+      type: "Diabetes",
+      Month: "April",
+      value: Math.floor(Math.random() * (14500 - 5000) + 5000),
+    },
+    {
+      city: "Cape Town",
+      type: "Heart Disease",
+      Month: "April",
+      value: Math.floor(Math.random() * (14500 - 5000) + 5000),
+    },
+  ]);
+
+  const config = {
+    data,
+    xField: "Month",
+    yField: "value",
+    seriesField: "type",
+    isGroup: true,
+    columnStyle: {
+      radius: [20, 20, 0, 0],
+    },
+  };
+
+  return (
+    <div
+      style={{
+        background: "#fff",
+        padding: "10px",
+        borderRadius: "10px",
+        width: "100%",
+      }}
+    >
+      <Column {...config} />
+    </div>
   );
 };
