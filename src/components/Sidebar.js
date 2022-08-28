@@ -12,7 +12,7 @@ import Messages from "../Assets/Svgs/messages.svg";
 import Devices from "../Assets/Svgs/devices.svg";
 import Analysis from "../Assets/Svgs/analysis.svg";
 import Dashboard from "../Assets/Svgs/dashboard.svg";
-
+import Logout from "../Assets/Svgs/log-out.svg";
 function Sidebar() {
   let links = [
     {
@@ -53,15 +53,41 @@ function Sidebar() {
   ];
   return (
     <div className="sidebar">
-      <img className="logo" src={Logo} alt="logo" />
-      {links.map((link) => (
+      <div>
+        <img className="logo" src={Logo} alt="logo" />
+        {links.map((link) => (
+          <NavLink
+            to={link.path}
+            className={({ isActive }) =>
+              isActive ? "linkContainerActive" : "linkContainer"
+            }
+            style={{
+              textDecoration: "none",
+            }}
+          >
+            <button
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "flex-start",
+                // margin: 0,
+              }}
+            >
+              <img style={{ margin: "10px" }} src={link.icon} alt={link.name} />
+              {link.name}
+            </button>
+          </NavLink>
+        ))}
+      </div>
+      <div>
         <NavLink
-          to={link.path}
+          to="/"
           className={({ isActive }) =>
             isActive ? "linkContainerActive" : "linkContainer"
           }
           style={{
             textDecoration: "none",
+            padding: "0px",
           }}
         >
           <button
@@ -69,14 +95,15 @@ function Sidebar() {
               display: "flex",
               alignItems: "center",
               justifyContent: "flex-start",
+
               // margin: 0,
             }}
           >
-            <img style={{margin:"10px"}} src={link.icon} alt={link.name} />
-            {link.name}
+            <img style={{ margin: "10px" }} src={Logout} alt="Logout" />
+            Logout
           </button>
         </NavLink>
-      ))}
+      </div>
       {/* <div>
         <NavLink
           to="/Dashboard"

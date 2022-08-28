@@ -30,7 +30,7 @@ function UpcomingApp() {
           padding: 0,
         }}
       >
-        Kidney Faulure Treatment
+        Kidney Failure Treatment
       </h6>
 
       <p style={{ color: "#048ba8", fontSize: 14, margin: 0, padding: 0 }}>
