@@ -1,15 +1,16 @@
-body{
-  background-color: #048ba8;
+body {
+	background-color: #048ba8;
+	font-family: 'Urbanist';
 }
 body::-webkit-scrollbar {
-  width: 3px;
+	width: 3px;
 }
 
 body::-webkit-scrollbar-track {
-  background-color:transparent;
+	background-color: transparent;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #bc0909;
-  border-radius: 10px;
+	background-color: #bc0909;
+	border-radius: 10px;
 }
