@@ -9,70 +9,22 @@ import { Divider } from "primereact/divider";
 // import { Chart } from 'primereact/chart';
 
 import styled from "styled-components";
+import CalendarCard from "./CalendarCard";
+import UpcomingApp from "./UpcomingApp";
 
 function HomeBody() {
   const [basicData] = useState({
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
       {
-        label: "My First dataset",
-        backgroundColor: "#42A5F5",
+        label: "2021",
+        backgroundColor: "#008080",
         data: [65, 59, 80, 81, 56, 55, 40],
       },
       {
-        label: "My Second dataset",
-        backgroundColor: "#FFA726",
-        data: [28, 48, 40, 19, 86, 27, 90],
-      },
-    ],
-  });
-
-  const [multiAxisData] = useState({
-    labels: ["January", "February", "March", "April", "May", "June", "July"],
-    datasets: [
-      {
-        label: "Dataset 1",
-        backgroundColor: [
-          "#EC407A",
-          "#AB47BC",
-          "#42A5F5",
-          "#7E57C2",
-          "#66BB6A",
-          "#FFCA28",
-          "#26A69A",
-        ],
-        yAxisID: "y",
-        data: [65, 59, 80, 81, 56, 55, 10],
-      },
-      {
-        label: "Dataset 2",
-        backgroundColor: "#78909C",
-        yAxisID: "y1",
-        data: [28, 48, 40, 19, 86, 27, 90],
-      },
-    ],
-  });
-
-  const [stackedData] = useState({
-    labels: ["January", "February", "March", "April", "May", "June", "July"],
-    datasets: [
-      {
-        type: "bar",
-        label: "Dataset 1",
+        label: "2022",
         backgroundColor: "#42A5F5",
-        data: [50, 25, 12, 48, 90, 76, 42],
-      },
-      {
-        type: "bar",
-        label: "Dataset 2",
-        backgroundColor: "#66BB6A",
-        data: [21, 84, 24, 75, 37, 65, 34],
-      },
-      {
-        type: "bar",
-        label: "Dataset 3",
-        backgroundColor: "#FFA726",
-        data: [41, 52, 24, 74, 23, 21, 32],
+        data: [28, 48, 40, 19, 86, 27, 90],
       },
     ],
   });
@@ -277,7 +229,7 @@ function HomeBody() {
     top: 82px;
     border-top: none;
     width: 20%;
-    height: 500px;
+    height: 550px;
     padding: 8px;
   `;
   const SideContent = styled.div`
@@ -316,7 +268,7 @@ function HomeBody() {
                 </div>
                 <div style={{ display: "flex", justifyContent: "center" }}>
                   <Button
-                    className="p-button-raised"
+                    className="p-button-outlined"
                     style={{ margin: "7px" }}
                     label="Event Details"
                   />
@@ -340,7 +292,7 @@ function HomeBody() {
                 </div>
                 <div style={{ display: "flex", justifyContent: "center" }}>
                   <Button
-                    className="p-button-raised"
+                  className="p-button-outlined"
                     style={{ margin: "7px" }}
                     label="Event Details"
                   />
@@ -356,7 +308,10 @@ function HomeBody() {
         </BodyContent>
       </Body>
       <Side>
-        <SideContent>Calendar and Appointments</SideContent>
+        <SideContent>
+          <CalendarCard />
+          <UpcomingApp />
+        </SideContent>
       </Side>
     </div>
   );

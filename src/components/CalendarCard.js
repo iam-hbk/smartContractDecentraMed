@@ -20,7 +20,7 @@ function CalendarCard() {
 	maxDate.setFullYear(nextYear);
 
 	return (
-		<Calendar value={date} onChange={(e) => setDate(e.value)} inline showWeek />
+		<Calendar style={{width: '99%'}} value={date} onChange={(e) => setDate(e.value)} inline showWeek />
 	);
 }
 
